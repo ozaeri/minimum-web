@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>minimum-web(contact)</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div id="root">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" style="color:#333">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Contact</h1>
+            <p>下記のフォームからお問合せください。</p>
+            <form>
+                <div>
+                    <label>Email</label>
+                    <input type="text" id="email" />
+                    <span id="email-error" class="form-error hidden">Emailは必須かつEmailの形式で入力してください。</span>
+                </div>
+                <div>
+                    <label>お問合せ内容</label>
+                    <textarea rows=3 id="body"></textarea>
+                    <span id="body-error" class="form-error hidden">お問合せ内容は必須かつ10文字以内で入力してください。</span>
+                    
+                </div>
+                <div>
+                    <button id="btn">送信</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            &copy minimum web.
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

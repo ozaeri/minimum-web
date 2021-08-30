@@ -1,0 +1,102 @@
+body {
+    margin: 0;/*領域間の余白を0*/
+    padding: 0;/*領域内の余白を0*/
+    font-family: sans-serif;/*フォントを指定*/
+}
+
+#root {
+    min-height: 100vh; /*表示領域の100%を高さに指定*/
+    display: flex; /*Flexboxを使ってレイアウトを自動で調整*/
+    flex-direction: column;/*フレックスコンテナの主軸方向を縦に指定*/
+}
+
+
+nav {
+    background-color: #aaa;/*背景色をグレーに指定*/
+}
+
+nav ul {
+    display: flex;/*Flexboxを使ってレイアウトを自動で調整して横並びに*/
+    list-style: none;/*リストのポチを消す*/
+    margin: 0;/*領域間の余白を0*/
+    padding: 0;/*領域内の余白を0*/
+}
+
+nav a {
+    display: block;/*ブロックボックス化*/
+    padding: 10px 15px;/*上下10px、左右15pxの余白を入れる（ことでブロックボックスの大きさを調整）*/
+    text-decoration: none;/*リンク部分のアンダーラインを消す*/
+    color: #fff;/*文字色を白*/
+}
+nav a:hover {
+    color: #ccc;
+}
+
+main {
+    margin-bottom: auto;/*下方向の余白を自動に指定*/
+    display: flex;/*Flexboxを使ってレイアウトを自動で調整*/
+    flex-direction: column;/*フレックスコンテナの主軸方向を縦に指定*/
+    align-items: center;/*表示をセンターに*/
+}
+
+footer {
+    background-color: #aaa;
+    height: 60px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact用 */
+form {
+    width: 60%;/*フォームの幅を指定*/
+}
+
+label {
+    display: block;/*ブロックボックス化（すると縦に要素が並ぶ）*/
+    margin-top: 15px;/*上部の余白を15px*/
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;/*input内の余白を5px(inputを広げる）*/
+    box-sizing: border-box;/*余白含めて指定したwidthになるように指定*/
+}
+
+textarea {
+    width: 100%;
+    resize: none;/*ユーザーが要素の寸法を制御できないようにする*/
+    padding: 5px;
+    box-sizing: border-box;/*余白含めて指定したwidthになるように指定*/
+}
+
+button {
+    margin-top: 10px;
+}
+
+.form-error {
+    display: block;
+    font-size: small;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width:640px) {
+    nav, footer{
+        background-color: #aac;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    button{
+        width: 100%;
+        padding: 10px;
+    }
+}
