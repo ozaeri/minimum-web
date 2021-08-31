@@ -4,7 +4,7 @@
 name: Node.js CI
 
 on:
-  page_build
+   page_build
 
 jobs:
   build:
@@ -25,4 +25,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - name: Check Website Availability
-    - run: bide tests/availability-test.js
+      run: node tests/availability-test.js
